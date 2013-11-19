@@ -30,6 +30,7 @@ Ext.define('Todo.view.Tasks', {
         },{
             xtype : 'container',
             flex  : 1,
+            cls   : 'todo-task-container',
             layout: 'fit',
             items : [{
                 xtype : 'titlebar',

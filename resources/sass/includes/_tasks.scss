@@ -1,3 +1,6 @@
+.todo-task-container{
+    @include box-shadow(-1px 0 15px #000);
+}
 .tasks-view{
     .x-dataview-item{
         position:relative;
