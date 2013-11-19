@@ -28,7 +28,8 @@ Ext.application({
     ],
 
     controllers: [
-        'Main'
+        'Main',
+        'Lists'
     ],
 
     icon: {

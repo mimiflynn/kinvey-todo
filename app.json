@@ -40,7 +40,10 @@
      */
     "js": [
         {
-            "path": "kinvey/kinvey-html5-1.1.2.min.js"
+            "path": "libs/kinvey-html5-1.1.2.min.js"
+        },
+        {
+            "path": "libs/md5.js"
         },
         {
             "path": "touch/sencha-touch.js",

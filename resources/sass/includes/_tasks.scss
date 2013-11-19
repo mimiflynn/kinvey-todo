@@ -27,3 +27,18 @@
         }
     }
 }
+
+.todo-lists-title{
+    .x-innerhtml{
+        padding:5px 0 0 10px;
+    }
+    img{
+        float:left;
+        @include border-radius(5px);
+    }
+    h1{
+        color:#fff;
+        text-align: center;
+        font-size: 1.2em;
+    }
+}

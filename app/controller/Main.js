@@ -15,7 +15,7 @@ Ext.define('Todo.controller.Main', {
         ],
         refs   : {
             tabs    : 'main',
-            dataview: 'dataview'
+            dataview: 'tasks #tasks-items'
         },
         control: {
             'login' : {
@@ -47,6 +47,8 @@ Ext.define('Todo.controller.Main', {
         }, function(error) {
             Ext.Msg.alert('Error','An error occurred while getting the connection to our servers. Make sure you have internet connection.');
         });
+
+        Todo.MD5 = {hash:md5};
     },
 
     doLogin     : function(form,values){
@@ -75,6 +77,9 @@ Ext.define('Todo.controller.Main', {
             }
         });
 
+        
+
+        Todo.app.getController('Lists').loadMyLists();
     },
 
     addTask          : function(task){
