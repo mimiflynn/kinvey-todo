@@ -40,6 +40,9 @@
      */
     "js": [
         {
+            "path": "kinvey/kinvey-html5-1.1.2.min.js"
+        },
+        {
             "path": "touch/sencha-touch.js",
             "x-bootstrap": true
         },

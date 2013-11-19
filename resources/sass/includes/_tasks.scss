@@ -1,0 +1,29 @@
+.tasks-view{
+    .x-dataview-item{
+        position:relative;
+        padding:5px 10px;
+
+        .item-remove{
+            float:left;
+            margin-right:10px;
+            width:30px;
+            height:30px;
+            @include inline-icon('minus');
+            cursor:pointer;
+        }
+
+        .item-remove:before{
+            width:30px;
+            height:30px;
+            text-align: left;
+            font-size: 28px;
+            left: 10px;
+            top: 5px;
+        }
+
+        .item-completed{
+            text-decoration: line-through;
+            font-weight:bold;
+        }
+    }
+}
