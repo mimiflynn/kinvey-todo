@@ -14,8 +14,7 @@ Ext.define('Todo.store.Lists', {
         proxy : {
             type    : 'memory',
             reader  : {
-                type         : 'json',
-                rootProperty : 'lists'
+                type    : 'json'
             }
         }
     }

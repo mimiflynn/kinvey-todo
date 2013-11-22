@@ -16,6 +16,7 @@ Ext.define('Todo.view.Lists', {
     config  : {
         hideAnimation : {type :"slide",direction : "right", duration : 500},
         showAnimation : {type :"slide",direction : "left", duration : 500},
+        layout: 'fit',
         items : [{
             xtype : 'toolbar',
             docked: 'top',
@@ -25,29 +26,11 @@ Ext.define('Todo.view.Lists', {
                 '<h1>My Lists</h1>'
             ].join('')
         },{
-            xtype   : 'component',
-            html    : 'All Tasks',
-            padding : '10 10 0 10'
-        },{
             xtype   : 'list',
-            //hidden  : true,
+            itemId  : 'mylist',
             cls     : 'todo-list-view',
-            padding : '10 0',
             store   : {type:'lists'},
-            itemTpl : '<div class="item-remove"></div> <p>{title}</p>',
-        },{
-            xtype   : 'container',
-            padding : '0 10 0 10',
-            items   : [{
-                xtype   : 'component',
-                html    : 'Add List...',
-                padding : '0 0 10 0'
-            },{
-                xtype   : 'textfield',
-                name    : 'title',
-                margins : '0 10 0 10',
-                hidden  : true
-            }]
+            itemTpl : '<div class="item-remove"></div> <p>{title}</p>'
         }]
     }
 });

@@ -77,8 +77,6 @@ Ext.define('Todo.controller.Main', {
             }
         });
 
-        
-
         Todo.app.getController('Lists').loadMyLists();
     },
 

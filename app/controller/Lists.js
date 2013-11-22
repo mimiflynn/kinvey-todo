@@ -12,7 +12,7 @@ Ext.define('Todo.controller.Lists', {
         refs   : {
             lists   : 'tasks mylists',
             toolbar : 'tasks mylists toolbar',
-            myLists : 'tasks mylists list'
+            myLists : 'tasks mylists #mylist'
         },
         control: {
             'tasks titlebar #toggle' : {
@@ -33,7 +33,8 @@ Ext.define('Todo.controller.Lists', {
         var user = Kinvey.getActiveUser(),
             promise = Kinvey.DataStore.find('lists', null, {
                 success: function(response) {
-                    me.getMyLists().getStore().setData({lists:response});
+                    //response.unshift({title:'All Tasks'});
+                    me.getMyLists().getStore().setData(response);
                 }
             });
 
