@@ -27,8 +27,8 @@ Ext.define('Todo.controller.Main', {
                 completetask: 'updateTask'
             }
         },
-        appKey       : 'kid_PTjfzpOmKq',
-        appSecret    : '4b753cfb1c9e4192bc4861d5d1244c1a'
+        appKey       : 'kid_VP1YmXuh49',
+        appSecret    : '97df68334146480784234e93f959eb0d'
     },
 
     init  : function(){
