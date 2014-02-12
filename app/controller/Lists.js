@@ -13,6 +13,7 @@ Ext.define('Todo.controller.Lists', {
             lists: 'tasks mylists',
             toolbar: 'tasks mylists toolbar',
             myLists: 'tasks mylists #mylist',
+            currentTasks: 'tasks #current-tasks',
             tasks: 'tasks #tasks-items'
         },
         control: {
@@ -30,7 +31,12 @@ Ext.define('Todo.controller.Lists', {
 
         list.setHidden(!list.isHidden());
 
-        (list.isHidden()) ? this.getTasks().getStore().clearFilter() : null;
+        (list.isHidden()) ? this.resetTasks() : null;
+    },
+
+    resetTasks: function(){
+        this.getTasks().getStore().clearFilter()
+        this.getCurrentTasks().setTitle('All Tasks');
     },
 
     loadMyLists: function () {
@@ -51,8 +57,10 @@ Ext.define('Todo.controller.Lists', {
 
     filterTasks: function (item, index, target, record, e, eOpts) {
         var tasks = this.getTasks().getStore(),
+            listName = record.getData().title,
             listId = record.getData()._id;
 
         tasks.filter('listId', listId);
+        this.getCurrentTasks().setTitle(listName);
     }
 });

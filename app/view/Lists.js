@@ -23,9 +23,11 @@ Ext.define('Todo.view.Lists', {
                 docked: 'top',
                 cls: 'todo-lists-title',
                 tpl: [
+                    '<h1>',
                     '<img src="http://www.gravatar.com/avatar/{avatar}?s=30">',
-                    '<h1>My Lists</h1>'
-                ].join('')
+                    'My Lists',
+                    '</h1>'
+                ].join('\n')
             },
             {
                 xtype: 'list',
