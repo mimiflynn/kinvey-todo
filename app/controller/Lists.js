@@ -29,6 +29,8 @@ Ext.define('Todo.controller.Lists', {
         var list = this.getLists();
 
         list.setHidden(!list.isHidden());
+
+        (list.isHidden()) ? this.getTasks().getStore().clearFilter() : null;
     },
 
     loadMyLists: function () {
