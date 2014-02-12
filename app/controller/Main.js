@@ -130,7 +130,7 @@ Ext.define('Todo.controller.Main', {
                     msg = "Wrong credentials, please try again.";
                     break;
                 default:
-                    msg = "Unknow error, please try again later.";
+                    msg = "Unknown error, please try again later.";
             }
 
             Ext.Msg.alert('Error', msg);

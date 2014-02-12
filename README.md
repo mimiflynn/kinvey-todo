@@ -12,7 +12,7 @@ A Sencha Touch app created to explore the Kinvey service.
 
 [Sencha Touch](http://docs.sencha.com/touch/2.3.0/)
 
-## Getting started with Development
+## Getting started with development
 
 - Create Kinvey account
 

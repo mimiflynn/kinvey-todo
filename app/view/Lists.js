@@ -6,31 +6,34 @@
  * This component shows the available lists of tasks
  */
 Ext.define('Todo.view.Lists', {
-    extend  : 'Ext.Container',
-    xtype   : 'mylists',
+    extend: 'Ext.Container',
+    xtype: 'mylists',
     requires: [
         'Todo.store.Lists',
         'Ext.dataview.List'
     ],
 
-    config  : {
-        hideAnimation : {type :"slide",direction : "right", duration : 500},
-        showAnimation : {type :"slide",direction : "left", duration : 500},
+    config: {
+        hideAnimation: {type: "slide", direction: "right", duration: 500},
+        showAnimation: {type: "slide", direction: "left", duration: 500},
         layout: 'fit',
-        items : [{
-            xtype : 'toolbar',
-            docked: 'top',
-            cls   : 'todo-lists-title',
-            tpl   : [
-                '<img src="http://www.gravatar.com/avatar/{avatar}?s=30">',
-                '<h1>My Lists</h1>'
-            ].join('')
-        },{
-            xtype   : 'list',
-            itemId  : 'mylist',
-            cls     : 'todo-list-view',
-            store   : {type:'lists'},
-            itemTpl : '<div class="item-remove"></div> <p>{title}</p>'
-        }]
+        items: [
+            {
+                xtype: 'toolbar',
+                docked: 'top',
+                cls: 'todo-lists-title',
+                tpl: [
+                    '<img src="http://www.gravatar.com/avatar/{avatar}?s=30">',
+                    '<h1>My Lists</h1>'
+                ].join('')
+            },
+            {
+                xtype: 'list',
+                itemId: 'mylist',
+                cls: 'todo-list-view',
+                store: {type: 'lists'},
+                itemTpl: '<div class="item-remove"></div> <p>{title}</p>'
+            }
+        ]
     }
 });

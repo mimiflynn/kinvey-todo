@@ -12,11 +12,15 @@ Ext.define('Todo.controller.Lists', {
         refs: {
             lists: 'tasks mylists',
             toolbar: 'tasks mylists toolbar',
-            myLists: 'tasks mylists #mylist'
+            myLists: 'tasks mylists #mylist',
+            tasks: 'tasks #tasks-items'
         },
         control: {
             'tasks titlebar #toggle': {
                 tap: 'toggleLists'
+            },
+            myLists: {
+                itemtap: 'filterTasks'
             }
         }
     },
@@ -41,5 +45,12 @@ Ext.define('Todo.controller.Lists', {
         me.getToolbar().setData({
             avatar: Todo.MD5.hash(user.email)
         });
+    },
+
+    filterTasks: function (item, index, target, record, e, eOpts) {
+        var tasks = this.getTasks().getStore(),
+            listId = record.getData()._id;
+
+        tasks.filter('listId', listId);
     }
 });
