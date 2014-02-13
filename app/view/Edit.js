@@ -24,6 +24,16 @@ Ext.define('Todo.view.Edit', {
             {
                 xtype: 'container',
                 html: 'this is the inside of the edit panel'
+            },
+            {
+                xtype: 'toolbar',
+                docked: 'bottom',
+                items: [
+                    {
+                        text: 'Done',
+                        action: 'saveItem'
+                    }
+                ]
             }
         ]
     }
