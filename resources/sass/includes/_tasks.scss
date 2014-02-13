@@ -28,6 +28,22 @@
             text-decoration: line-through;
             font-weight:bold;
         }
+
+        .item-edit {
+          float: left;
+          margin-right:10px;
+          width:30px;
+          height:30px;
+          @include inline-icon('compose');
+          &:before{
+            width:30px;
+            height:30px;
+            text-align: left;
+            font-size: 28px;
+            left: 10px;
+            top: 5px;
+          }
+        }
     }
 }
 

@@ -11,10 +11,12 @@ Ext.define('Todo.controller.Main', {
     config: {
         views: [
             'Login',
+            'Edit',
             'Main'
         ],
         refs: {
             tabs: 'main',
+            edit: 'edit',
             dataview: 'tasks #tasks-items'
         },
         control: {
@@ -24,6 +26,7 @@ Ext.define('Todo.controller.Main', {
             'tasks': {
                 addtask: 'addTask',
                 removetask: 'removeTask',
+                edittask: 'editTask',
                 completetask: 'updateTask'
             }
         },
@@ -97,6 +100,13 @@ Ext.define('Todo.controller.Main', {
                     me.getDataview().getStore().remove(task);
                 }
             });
+    },
+
+    editTask: function (task) {
+        console.log('edit that task');
+        Ext.Viewport.add({
+            xtype: 'edit'
+        });
     },
 
     updateTask: function (record) {

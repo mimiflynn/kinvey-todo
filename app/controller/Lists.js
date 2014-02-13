@@ -37,6 +37,7 @@ Ext.define('Todo.controller.Lists', {
     resetTasks: function(){
         this.getTasks().getStore().clearFilter()
         this.getCurrentTasks().setTitle('All Tasks');
+        this.getMyLists().deselectAll();
     },
 
     loadMyLists: function () {

@@ -8,6 +8,8 @@ A Sencha Touch app created to explore the Kinvey service.
 
 [Kinvey Getting Started](http://devcenter.kinvey.com/html5/guides/getting-started)
 
+[Kinvey Data Model Relationships](http://www.kinvey.com/blog/71/how-to-model-data-relationships-in-your-kinvey-backend)
+
 [Kinvey API](http://devcenter.kinvey.com/html5/reference/api/index.html)
 
 [Sencha Touch](http://docs.sencha.com/touch/2.3.0/)
