@@ -8,32 +8,41 @@
 Ext.define('Todo.view.Edit', {
     extend: 'Ext.Panel',
     xtype: 'edit',
+    requires: [
+        'Todo.view.Lists',
+        'Ext.dataview.List'
+    ],
 
     config: {
-        height: 300,
-        width: 300,
+        height: '80%',
+        width: '80%',
         modal: true,
         centered: true,
         hideOnMaskTap: true,
+        scrollable: true,
+        layout: 'fit',
         items: [
             {
                 xtype: 'titlebar',
-                docked: 'top',
-                title: 'Edit Task'
+                title: 'Edit Task',
+                docked: 'top'
             },
             {
                 xtype: 'container',
-                html: 'this is the inside of the edit panel'
+                html: 'This is where one can edit a task'
             },
             {
                 xtype: 'toolbar',
                 docked: 'bottom',
-                items: [
-                    {
-                        text: 'Done',
-                        action: 'saveItem'
-                    }
-                ]
+                items: [{
+                    text: 'Save',
+                    ui: 'confirm',
+                    action: 'updateItem'
+                },{
+                    text: 'Cancel',
+                    ui: 'decline',
+                    action: 'closeModal'
+                }]
             }
         ]
     }
