@@ -107,6 +107,8 @@ Ext.define('Todo.controller.Main', {
         Ext.Viewport.add({
             xtype: 'edit'
         });
+
+        Todo.app.getController('Lists').loadMyLists();
     },
 
     updateTask: function (record) {

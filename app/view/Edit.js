@@ -19,7 +19,6 @@ Ext.define('Todo.view.Edit', {
         modal: true,
         centered: true,
         hideOnMaskTap: true,
-        scrollable: true,
         layout: 'fit',
         items: [
             {
@@ -28,8 +27,14 @@ Ext.define('Todo.view.Edit', {
                 docked: 'top'
             },
             {
-                xtype: 'container',
-                html: 'This is where one can edit a task'
+                xtype: 'list',
+                itemId: 'taskLists',
+                cls: 'todo-task-lists',
+                data: [
+                    { title: 'Kickstart', value: '52fa7cbb4971b80c3905a930' },
+                    { title: 'Set Up', value: '52fa8a694609ba980405bbdb' }
+                ],
+                itemTpl: '<div class="item-remove"></div> <p>{title}</p>'
             },
             {
                 xtype: 'toolbar',
