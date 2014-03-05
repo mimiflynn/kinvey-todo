@@ -51,9 +51,11 @@ Ext.define('Todo.controller.Lists', {
                 }
             });
 
+        /*
         me.getToolbar().setData({
             avatar: Todo.MD5.hash(user.email)
         });
+        */
     },
 
     filterTasks: function (item, index, target, record, e, eOpts) {

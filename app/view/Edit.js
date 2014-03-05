@@ -9,6 +9,7 @@ Ext.define('Todo.view.Edit', {
     extend: 'Ext.Panel',
     xtype: 'edit',
     requires: [
+        'Todo.store.Lists',
         'Todo.view.Lists',
         'Ext.dataview.List'
     ],
@@ -30,11 +31,14 @@ Ext.define('Todo.view.Edit', {
                 xtype: 'list',
                 itemId: 'taskLists',
                 cls: 'todo-task-lists',
+/*
                 data: [
-                    { title: 'Kickstart', value: '52fa7cbb4971b80c3905a930' },
-                    { title: 'Set Up', value: '52fa8a694609ba980405bbdb' }
+                    { title: 'Kickstart', _id: '52fa7cbb4971b80c3905a930' },
+                    { title: 'Set Up', _id: '52fa8a694609ba980405bbdb' }
                 ],
-                itemTpl: '<div class="item-remove"></div> <p>{title}</p>'
+*/
+                store: 'store.lists',
+                itemTpl: '<p>{title}</p>'
             },
             {
                 xtype: 'toolbar',
